@@ -11,6 +11,7 @@ export const links = [
     name: "Projects",
     hash: "#projects",
   },
+  { name: "Contact", hash: "#contact" },
 ];
 
 export const skillsData = [
