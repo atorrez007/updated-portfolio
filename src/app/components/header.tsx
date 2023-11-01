@@ -65,31 +65,31 @@ function Header() {
         </nav>
       </motion.div>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.nav
-            className="py-1 origin-left"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            exit={{ x: -300, opacity: 0 }}
-            // variants={menuVariants}
-            // initial="initial"
-            // animate="animate"
-            // exit="exit"
-          >
-            {links.map((link) => (
-              <motion.ul
-                key={link.name}
-                className="py-1 text-md md:hidden lg:hidden flex justify-center px-8 transition-all duration-300 hover:text-white cursor-pointer hover:bg-gray-700"
-                layout
-              >
-                {link.name}
-              </motion.ul>
-            ))}
-          </motion.nav>
-        ) : null}
-      </AnimatePresence>
+      {/* <AnimatePresence> */}
+      {open ? (
+        <motion.nav
+          className="py-1 origin-left"
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          // exit={{ x: -300, opacity: 0 }}
+          // variants={menuVariants}
+          // initial="initial"
+          // animate="animate"
+          // exit="exit"
+        >
+          {links.map((link) => (
+            <motion.ul
+              key={link.name}
+              className="py-1 text-md md:hidden lg:hidden flex justify-center px-8 transition-all duration-300 hover:text-white cursor-pointer hover:bg-gray-700"
+              layout
+            >
+              {link.name}
+            </motion.ul>
+          ))}
+        </motion.nav>
+      ) : null}
+      {/* </AnimatePresence> */}
     </>
   );
 }
