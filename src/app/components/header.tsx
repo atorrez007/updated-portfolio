@@ -12,21 +12,21 @@ function Header() {
   const handleMenu = () => {
     setOpen((prevState) => !prevState);
   };
-  const menuVariants: menuVariantsType = {
-    initial: {
-      scaleX: -0,
-    },
-    animate: {
-      scaleX: 1,
-      transition: {
-        duration: 0.4,
-        // ease: [0.12, 0, 0.39, 0],
-      },
-    },
-    exit: {
-      scaleX: -0,
-    },
-  };
+  // const menuVariants: menuVariantsType = {
+  //   initial: {
+  //     scaleX: -0,
+  //   },
+  //   animate: {
+  //     scaleX: 1,
+  //     transition: {
+  //       duration: 0.4,
+  //       // ease: [0.12, 0, 0.39, 0],
+  //     },
+  //   },
+  //   exit: {
+  //     scaleX: -0,
+  //   },
+  // };
   return (
     <>
       {/* basic reload spring animation */}
@@ -69,14 +69,14 @@ function Header() {
         {open ? (
           <motion.nav
             className="py-1 origin-left"
-            // initial={{ x: -200, opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.4 }}
-            // exit={{ x: -300, opacity: 0 }}
-            variants={menuVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            exit={{ x: -300, opacity: 0 }}
+            // variants={menuVariants}
+            // initial="initial"
+            // animate="animate"
+            // exit="exit"
           >
             {links.map((link) => (
               <motion.ul
