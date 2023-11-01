@@ -1,17 +1,17 @@
 export const links = [
   {
     name: "Home",
-    hash: "#home",
+    source: "/home",
   },
   {
     name: "About",
-    hash: "#about",
+    source: "/about",
   },
   {
     name: "Projects",
-    hash: "#projects",
+    source: "/projects",
   },
-  { name: "Contact", hash: "#contact" },
+  { name: "Contact", source: "/contact" },
 ];
 
 export const skillsData = [
