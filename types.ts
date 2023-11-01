@@ -6,7 +6,7 @@ export type menuVariantsType = {
     scaleX: number;
     transition: {
       duration: number;
-      ease: number[];
+      // ease: number[];
     };
   };
   exit: {

@@ -20,7 +20,7 @@ function Header() {
       scaleX: 1,
       transition: {
         duration: 0.4,
-        ease: [0.12, 0, 0.39, 0],
+        // ease: [0.12, 0, 0.39, 0],
       },
     },
     exit: {
