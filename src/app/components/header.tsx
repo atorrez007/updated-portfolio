@@ -72,7 +72,7 @@ function Header() {
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4 }}
-            exit={{ x: -300, opacity: 0 }}
+            exit={{ x: 0, opacity: 0 }}
             // variants={menuVariants}
             // initial="initial"
             // animate="animate"
