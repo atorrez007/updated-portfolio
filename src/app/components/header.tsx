@@ -13,7 +13,7 @@ function Header() {
   const handleMenu = () => {
     setOpen((prevState) => !prevState);
   };
-  // const menuVariants: menuVariantsType = {
+  // const menuVariants: any = {
   //   initial: {
   //     scaleX: -0,
   //   },
@@ -21,11 +21,14 @@ function Header() {
   //     scaleX: 1,
   //     transition: {
   //       duration: 0.4,
-  //       // ease: [0.12, 0, 0.39, 0],
+  //       ease: [0.12, 0, 0.39, 0],
   //     },
   //   },
   //   exit: {
   //     scaleX: -0,
+  //     transition: {
+  //       duration: 0.2,
+  //     },
   //   },
   // };
   return (
@@ -69,10 +72,14 @@ function Header() {
         {open ? (
           <motion.nav
             className="py-1 origin-left"
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            exit={{ x: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            exit={{
+              y: -50,
+              opacity: -1,
+              transition: { duration: 0.1 },
+            }}
             // variants={menuVariants}
             // initial="initial"
             // animate="animate"
