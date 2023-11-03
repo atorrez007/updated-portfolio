@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { links } from "../../../lib/data";
-import { motion, AnimatePresence, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
 import { menuVariantsType } from "../../../types";
+import Link from "next/link";
 
 function Header() {
   const [open, setOpen] = useState<boolean>(false);
@@ -45,12 +46,11 @@ function Header() {
         <nav className="px-2 gap-2 text-lg">
           <div className="hidden md:flex lg:flex">
             {links.map((link) => (
-              <ul
-                className="px-3 py-1 mr-1 transition-all duration-300 hover:bg-gray-700 rounded-md hover:text-white cursor-pointer"
-                key={link.source}
-              >
-                {link.name}
-              </ul>
+              <Link key={link.source} href={link.source}>
+                <ul className="px-3 py-1 mr-1 transition-all duration-300 hover:bg-gray-700 rounded-md hover:text-white cursor-pointer">
+                  {link.name}
+                </ul>
+              </Link>
             ))}
           </div>
           <div className="-mr-0 flex md:hidden lg:hidden xl:hidden">
@@ -79,13 +79,14 @@ function Header() {
             // exit="exit"
           >
             {links.map((link) => (
-              <motion.ul
-                key={link.name}
-                className="py-1 text-md md:hidden lg:hidden flex justify-center px-8 transition-all duration-300 hover:text-white cursor-pointer hover:bg-gray-700"
-                layout
-              >
-                {link.name}
-              </motion.ul>
+              <Link key={link.source} href={link.source} onClick={handleMenu}>
+                <motion.ul
+                  className="py-1 text-md md:hidden lg:hidden flex justify-center px-8 transition-all duration-300 hover:text-white cursor-pointer hover:bg-gray-700"
+                  layout
+                >
+                  {link.name}
+                </motion.ul>
+              </Link>
             ))}
           </motion.nav>
         ) : null}
