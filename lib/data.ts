@@ -3,16 +3,13 @@ export const links = [
     name: "Home",
     source: "/",
   },
-  {
-    name: "About",
-    source: "/about",
-  },
+
   {
     name: "Projects",
     source: "/projects",
   },
   { name: "Contact", source: "/contact" },
-];
+] as const;
 
 export const skillsData = [
   "HMTL",
