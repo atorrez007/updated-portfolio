@@ -4,7 +4,6 @@ import { links } from "../../../lib/data";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
-import { menuVariantsType } from "../../../types";
 import Link from "next/link";
 
 function Header() {
