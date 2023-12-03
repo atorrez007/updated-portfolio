@@ -82,7 +82,7 @@ function Header() {
             <button
               type="button"
               onClick={handleMenu}
-              className="items-center border-black border-[2px] p-2 transition-all duration-400 hover:bg-gray-700 hover:text-white"
+              className="items-center dark:border-white border-black border-[2px] p-2 transition-all duration-400 hover:bg-gray-700 hover:text-white"
             >
               {open ? <TfiClose /> : <RxHamburgerMenu />}
             </button>

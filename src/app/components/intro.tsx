@@ -21,7 +21,7 @@ export default function Intro() {
               Hey, I&apos;m Armando.
             </h1>
           </div>
-          <h1 className="my-3 text-lg text-center md:text-left pr-6">
+          <h1 className="my-3  text-lg text-center md:text-left pr-6">
             I&apos;m a software developer located in the sunny, SoCal area.
             I&apos;m currently building full-stack web and mobile applications.
           </h1>

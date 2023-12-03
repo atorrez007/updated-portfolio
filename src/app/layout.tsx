@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
-import Footer from "./components/footer";
-import Social from "./components/social";
+import Providers from "../app/providers";
+import ThemeSwitcher from "../app/ThemeSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Atorrez007 | Professional Portfolio",
   description: "Armando is a full-stack developer",
 };
-
+// bg-gradient-to-r from-violet-200 to-pink-200
 export default function RootLayout({
   children,
 }: {
@@ -20,10 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gradient-to-r from-violet-200 to-pink-200 text-gray-950 relative min-h-screen container max-w-4xl mx-auto`}
+        className={`${inter.className} dark:text-white dark:bg-black  text-gray-950 relative min-h-screen container max-w-4xl mx-auto`}
       >
-        <Header />
-        {children}
+        <Providers>
+          <ThemeSwitcher />
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
