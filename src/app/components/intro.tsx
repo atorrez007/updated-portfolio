@@ -17,12 +17,19 @@ export default function Intro() {
       >
         <div>
           <div className="text-center md:text-left">
-            <h1 className="group my-4 text-3xl font-semibold">Hello!</h1>
+            <h1 className="group my-4 text-3xl font-semibold">
+              Hey, I&apos;m Armando.
+            </h1>
           </div>
-          <p className="my-3 text-center md:text-left">My name is Armando.</p>
-          <p className="my-3 text-center md:text-left">
-            I&apos;m a software developer.
-          </p>
+          <h1 className="my-3 text-lg text-center md:text-left pr-6">
+            I&apos;m a software developer located in the sunny, SoCal area.
+            I&apos;m currently building full-stack web and mobile applications.
+          </h1>
+          <h1 className="my-3 text-lg text-center md:text-left pr-6">
+            I&apos;m also interested in contributing to open-source projects. If
+            you&apos;re interested in collaborating or want some help, please
+            reach out! 👇🏻
+          </h1>
         </div>
         <div className="flex">
           <Image
@@ -32,6 +39,7 @@ export default function Intro() {
             alt="armando-portrait"
             src={image2}
             quality={100}
+            priority={true}
           />
         </div>
       </motion.div>
