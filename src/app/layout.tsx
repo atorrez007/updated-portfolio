@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} dark:text-white bg-gradient-to-r from-violet-200 to-pink-200 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-500
+        className={`${inter.className} dark:text-white bg-gradient-to-r from-violet200 to-pink200 dark:bg-gradient-to-b dark:from-slate900 dark:to-slate200
          text-gray-950 relative min-h-screen container max-w-4xl mx-auto`}
       >
         <Providers>

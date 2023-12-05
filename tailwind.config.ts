@@ -7,6 +7,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      violet200: "#ddd6fe",
+      pink200: "#fbcfe8",
+      slate900: "#0f172a",
+      slate500: "#64748b",
+      terminalGreen: "#66FF66",
+    },
     screens: {
       xs: "350px",
       md: "768px",
