@@ -1,10 +1,23 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { use, useState } from "react";
 import image2 from "../assets/porftolio-image2.jpg";
 import { motion } from "framer-motion";
 
 export default function Intro() {
+  const [dark, setDark] = useState<boolean>(true);
+  const cursorVariants = {
+    blinking: {
+      opacity: [0, 0, 1, 1],
+      transition: {
+        duration: 0.9,
+        repeat: Infinity,
+        repeatDelay: 0,
+        ease: "linear",
+        times: [0, 0.5, 0.5, 1],
+      },
+    },
+  };
   return (
     <section>
       <motion.div
@@ -17,8 +30,15 @@ export default function Intro() {
       >
         <div>
           <div className="text-center md:text-left">
-            <h1 className="group my-4 text-3xl font-semibold">
-              Hey, I&apos;m Armando.
+            <h1 className="group my-4 text-3xl font-semibold dark:text-terminalGreen">
+              Hey, I&apos;m Armando
+              {dark ? (
+                <motion.span variants={cursorVariants} animate="blinking">
+                  _
+                </motion.span>
+              ) : (
+                <motion.span>.</motion.span>
+              )}
             </h1>
           </div>
           <h1 className="my-3  text-lg text-center md:text-left pr-6">
