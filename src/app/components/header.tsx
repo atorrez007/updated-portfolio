@@ -34,7 +34,7 @@ function Header() {
     <>
       {/* basic reload spring animation */}
       <motion.div
-        className="flex p-4 border-b-[2px]  border-black items-center justify-between"
+        className="flex p-4 border-b-[2px] dark:border-white border-black items-center justify-between"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -72,7 +72,7 @@ function Header() {
           <div className="hidden md:flex lg:flex">
             {links.map((link) => (
               <Link key={link.source} href={link.source}>
-                <ul className="px-3 py-1 mr-1 transition-all duration-300 hover:bg-gray-700 rounded-md  hover:text-white cursor-pointer">
+                <ul className="px-3 py-1 mr-1 transition-all duration-300 hover:bg-gray-700 rounded-md   hover:text-white cursor-pointer">
                   {link.name}
                 </ul>
               </Link>

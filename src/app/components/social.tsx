@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 function Social() {
   return (
     <motion.section
-      className="mt-8"
+      className="mt-8 "
       initial={{ y: 25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <hr className="my-8 border-b-[1px] border-black"></hr>
+      <hr className="my-8 border-b-[1px] border-black  dark:border-white"></hr>
       <section className="flex justify-center gap-6">
         <SocialIcon
           url="https://github.com/atorrez007"
