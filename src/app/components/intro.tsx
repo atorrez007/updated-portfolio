@@ -1,23 +1,26 @@
 "use client";
 import Image from "next/image";
-import React, { use, useState } from "react";
+import React, { useEffect } from "react";
 import image2 from "../assets/porftolio-image2.jpg";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { cursorVariants } from "../../../types";
 
 export default function Intro() {
-  const [dark, setDark] = useState<boolean>(true);
-  const cursorVariants = {
-    blinking: {
-      opacity: [0, 0, 1, 1],
-      transition: {
-        duration: 0.9,
-        repeat: Infinity,
-        repeatDelay: 0,
-        ease: "linear",
-        times: [0, 0.5, 0.5, 1],
-      },
-    },
-  };
+  const greeting = "Hi, I'm Armando";
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const displayText = useTransform(rounded, (latest) =>
+    greeting.slice(0, latest)
+  );
+
+  useEffect(() => {
+    const controls = animate(count, greeting.length, {
+      duration: 2.7,
+      ease: "easeInOut",
+    });
+    return controls.stop;
+  }, [count]);
+
   return (
     <section>
       <motion.div
@@ -31,14 +34,14 @@ export default function Intro() {
         <div>
           <div className="text-center md:text-left">
             <h1 className="group my-4 text-3xl font-semibold dark:text-terminalGreen">
-              Hey, I&apos;m Armando
-              {dark ? (
-                <motion.span variants={cursorVariants} animate="blinking">
-                  _
-                </motion.span>
-              ) : (
-                <motion.span>.</motion.span>
-              )}
+              <motion.span>{displayText}</motion.span>
+              <motion.span
+                className="inline-block"
+                variants={cursorVariants}
+                animate="blinking"
+              >
+                _
+              </motion.span>
             </h1>
           </div>
           <h1 className="my-3  text-lg text-center md:text-left pr-6">
@@ -46,7 +49,7 @@ export default function Intro() {
             I&apos;m currently building full-stack web and mobile applications.
           </h1>
           <h1 className="my-3 text-lg text-center md:text-left pr-6">
-            I&apos;m also interested in contributing to open-source projects. If
+            I&apos;m also like contributing to open-source projects. If
             you&apos;re interested in collaborating or want some help, please
             reach out! 👇🏻
           </h1>
