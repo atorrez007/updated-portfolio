@@ -4,10 +4,13 @@ import { links } from "../../../lib/data";
 import { motion, AnimatePresence } from "framer-motion";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
+import { LuSunMoon } from "react-icons/lu";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 function Header() {
   const [open, setOpen] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme();
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const handleMenu = () => {
     setOpen((prevState) => !prevState);
@@ -77,8 +80,42 @@ function Header() {
                 </ul>
               </Link>
             ))}
+            {theme === "dark" ? (
+              <button
+                onClick={() => {
+                  setTheme("light");
+                }}
+              >
+                <LuSunMoon size={30} />
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setTheme("dark");
+                }}
+              >
+                <LuSunMoon size={30} />
+              </button>
+            )}
           </div>
           <div className="-mr-0 flex md:hidden lg:hidden xl:hidden">
+            {theme === "dark" ? (
+              <button
+                onClick={() => {
+                  setTheme("light");
+                }}
+              >
+                <LuSunMoon className="mr-5" size={30} />
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  setTheme("dark");
+                }}
+              >
+                <LuSunMoon className="mr-5" size={30} />
+              </button>
+            )}
             <button
               type="button"
               onClick={handleMenu}

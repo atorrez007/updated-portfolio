@@ -10,17 +10,27 @@ function ThemeSwitcher({ children }: any) {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    const testFunc = () => {
+      theme === "dark"
+        ? console.log("theme is dark")
+        : console.log("theme is light");
+    };
+    testFunc();
+  }, [theme]);
+
   if (!mounted) {
     return <>{children}</>;
   }
+
   return (
-    <div>
-      The current theme is: {theme}
-      <div>
+    <>
+      {/* The current theme is: {theme} */}
+      {/* <div>
         <button onClick={() => setTheme("light")}>Light Mode</button>
         <button onClick={() => setTheme("dark")}>Dark Mode</button>
-      </div>
-    </div>
+      </div> */}
+    </>
   );
 }
 

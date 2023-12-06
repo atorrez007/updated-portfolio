@@ -4,10 +4,12 @@ import React, { useEffect } from "react";
 import image2 from "../assets/porftolio-image2.jpg";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import { cursorVariants } from "../../../types";
-
+import { useTheme } from "next-themes";
 export default function Intro() {
   const greeting = "Hi, I'm Armando";
+
   const count = useMotionValue(0);
+
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const displayText = useTransform(rounded, (latest) =>
     greeting.slice(0, latest)
