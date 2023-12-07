@@ -51,9 +51,8 @@ export default function Intro() {
             I&apos;m currently building full-stack web and mobile applications.
           </h1>
           <h1 className="my-3 text-lg text-center md:text-left pr-6">
-            I&apos;m also like contributing to open-source projects. If
-            you&apos;re interested in collaborating or want some help, please
-            reach out! 👇🏻
+            I also like contributing to open-source projects. If you&apos;re
+            interested in collaborating or want some help, please reach out! 👇🏻
           </h1>
         </div>
         <div className="flex">
