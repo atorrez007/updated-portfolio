@@ -35,7 +35,6 @@ function Header() {
   // };
   return (
     <>
-      {/* basic reload spring animation */}
       <motion.div
         className="flex p-4 border-b-[2px] dark:border-white border-black items-center justify-between"
         initial={{ y: -100, opacity: 0 }}
