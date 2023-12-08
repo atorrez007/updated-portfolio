@@ -11,28 +11,9 @@ import { useTheme } from "next-themes";
 function Header() {
   const [open, setOpen] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
-  const [isMobile, setIsMobile] = useState<boolean>(false);
   const handleMenu = () => {
     setOpen((prevState) => !prevState);
   };
-  // const menuVariants: any = {
-  //   initial: {
-  //     scaleX: -0,
-  //   },
-  //   animate: {
-  //     scaleX: 1,
-  //     transition: {
-  //       duration: 0.4,
-  //       ease: [0.12, 0, 0.39, 0],
-  //     },
-  //   },
-  //   exit: {
-  //     scaleX: -0,
-  //     transition: {
-  //       duration: 0.2,
-  //     },
-  //   },
-  // };
   return (
     <>
       <motion.div

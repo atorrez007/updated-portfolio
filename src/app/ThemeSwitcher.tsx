@@ -4,20 +4,20 @@ import { useTheme } from "next-themes";
 
 function ThemeSwitcher({ children }: any) {
   const [mounted, setMounted] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const testFunc = () => {
-      theme === "dark"
-        ? console.log("theme is dark")
-        : console.log("theme is light");
-    };
-    testFunc();
-  }, [theme]);
+  // useEffect(() => {
+  //   const testFunc = () => {
+  //     theme === "dark"
+  //       ? console.log("theme is dark")
+  //       : console.log("theme is light");
+  //   };
+  //   testFunc();
+  // }, [theme]);
 
   if (!mounted) {
     return <>{children}</>;

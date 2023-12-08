@@ -15,6 +15,7 @@ export type menuVariantsType = {
 };
 
 export type projectType = {
+  id: number;
   title: string;
   imgUrl: string;
   description: string;

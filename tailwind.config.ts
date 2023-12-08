@@ -13,6 +13,7 @@ const config: Config = {
       slate900: "#0f172a",
       slate500: "#64748b",
       terminalGreen: "#66FF66",
+      darkGreen: "#00ff66",
       darkMode: "#181825",
     },
     screens: {
