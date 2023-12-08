@@ -14,6 +14,14 @@ export type menuVariantsType = {
   };
 };
 
+export type projectType = {
+  title: string;
+  imgUrl: string;
+  description: string;
+  tags: string[];
+  link: string;
+};
+
 export const cursorVariants = {
   blinking: {
     opacity: [0, 0, 1, 1],

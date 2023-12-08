@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import image2 from "../assets/porftolio-image2.jpg";
 import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import { cursorVariants } from "../../../types";
-import { useTheme } from "next-themes";
+
 export default function Intro() {
   const greeting = "Hi, I'm Armando";
 
@@ -46,7 +46,7 @@ export default function Intro() {
               </motion.span>
             </h1>
           </div>
-          <h1 className="my-3  text-lg text-center md:text-left pr-6">
+          <h1 className="my-3 text-lg text-center md:text-left pr-6">
             I&apos;m a software developer located in the sunny, SoCal area.
             I&apos;m currently building full-stack web and mobile applications.
           </h1>
