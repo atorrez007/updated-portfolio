@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { projectData } from "../../../lib/data";
 import Card from "../components/card";
+
 export default function Projects() {
   return (
     <motion.section
@@ -10,7 +12,7 @@ export default function Projects() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mt-10 flex xs:justify-center md:justify-start">
+      <div className="mt-10 text-lg flex xs:justify-center md:justify-start">
         These are projects that I am currently working on.
       </div>
       <div>

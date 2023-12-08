@@ -1,7 +1,7 @@
 import React from "react";
 
 function Card() {
-  return <div>Project Card</div>;
+  return <div></div>;
 }
 
 export default Card;
