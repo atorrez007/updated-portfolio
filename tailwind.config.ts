@@ -14,6 +14,7 @@ const config: Config = {
       slate500: "#64748b",
       terminalGreen: "#66FF66",
       darkGreen: "#00ff66",
+      otherDarkGreen: "#16a34a",
       darkMode: "#181825",
     },
     screens: {

@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Card({ title, description, tags }: any) {
   return (
-    <div className="max-w-md shadow-md dark:shadow-sm  shadow-slate900 dark:shadow-terminalGreen dark:border-terminalGreen border-2">
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      // create shadow delay
+      className="max-w-md shadow-md shadow-slate900 hover:shadow-md   dark:hover:shadow-md dark:hover:shadow-terminalGreen
+      dark:border-terminalGreen border-2"
+    >
       <div className="px-6 py-4 w-auto">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="">{description}</p>
@@ -16,7 +22,7 @@ function Card({ title, description, tags }: any) {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

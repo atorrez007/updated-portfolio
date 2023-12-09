@@ -15,15 +15,14 @@ export default function Projects() {
       <div className="mt-10 my-8 text-lg flex xs:justify-center md:justify-center lg:justify-start">
         These are projects that I am currently working on.
       </div>
-      <div>
-        <div className="mt-2 container m-auto grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {/* {projectData.map((data) => {
+
+      <div className="mt-2 w-auto container m-auto grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
+        {/* {projectData.map((data) => {
             return <Card key={data.id} {...data} />;
           })} */}
-          {testProjectData.map((data) => {
-            return <Card key={data.id} {...data} />;
-          })}
-        </div>
+        {testProjectData.map((data) => {
+          return <Card key={data.id} {...data} />;
+        })}
       </div>
     </motion.section>
   );
