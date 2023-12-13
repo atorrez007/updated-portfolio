@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+import colors from "tailwindcss/colors";
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +8,10 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      ...colors,
       violet200: "#ddd6fe",
       pink200: "#fbcfe8",
-      slate900: "#0f172a",
+      // slate900: "#0f172a",
       slate500: "#64748b",
       terminalGreen: "#66FF66",
       darkGreen: "#00ff66",
