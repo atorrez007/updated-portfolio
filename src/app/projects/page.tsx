@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { testProjectData } from "../../../lib/data";
 import Card from "../components/card";
+import Social from "../components/social";
 
 export default function Projects() {
   return (
@@ -24,6 +25,7 @@ export default function Projects() {
           return <Card key={data.id} {...data} />;
         })}
       </div>
+      <Social />
     </motion.section>
   );
 }

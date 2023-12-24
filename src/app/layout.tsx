@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "./components/header";
 import Providers from "../app/providers";
 import ThemeSwitcher from "../app/ThemeSwitcher";
-
+import Social from "./components/social";
+import { motion } from "framer-motion";
 const inter = Inter({ subsets: ["latin"] });
 
 const space = Space_Grotesk({

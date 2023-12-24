@@ -23,6 +23,14 @@ export type projectType = {
   link: string;
 };
 
+export type SocialType = {
+  id: number;
+  name: string;
+  url: string;
+  target: string;
+  style: object;
+};
+
 export const cursorVariants = {
   blinking: {
     opacity: [0, 0, 1, 1],

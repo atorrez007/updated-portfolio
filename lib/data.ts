@@ -1,4 +1,4 @@
-import { projectType } from "../types";
+import { SocialType, projectType } from "../types";
 export const links = [
   {
     name: "Home",
@@ -27,6 +27,30 @@ export const skillsData = [
   "Tailwind",
   "Sass",
 ];
+
+export const socialData: SocialType[] = [
+  {
+    id: 0,
+    name: "github",
+    url: "https://github.com/atorrez007",
+    target: "_blank",
+    style: { height: 40, width: 40 },
+  },
+  {
+    id: 1,
+    name: "x",
+    url: "https://x.com/atorrez_007",
+    target: "_blank",
+    style: { height: 40, width: 40 },
+  },
+  {
+    id: 2,
+    name: "linkedIn",
+    url: "https://linkedin.com/in/atorrez007",
+    target: "_blank",
+    style: { height: 40, width: 40 },
+  },
+] as const;
 
 export const testProjectData: projectType[] = [
   {
