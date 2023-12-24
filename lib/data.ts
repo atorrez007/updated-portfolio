@@ -50,7 +50,7 @@ export const socialData: SocialType[] = [
     target: "_blank",
     style: { height: 40, width: 40 },
   },
-] as const;
+];
 
 export const testProjectData: projectType[] = [
   {
